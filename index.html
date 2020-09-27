@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<title>Question-Answer</title>
+	</head>
+	<body>
+		<div class="container mt-2">
+			<div class="row">
+				<div class="col-8">
+					<div class="card">
+						<div class="card-header">Quiz</div>
+						<div class="card-body">
+							<h5 class="card-title" id="question">Question Text</h5>
+							<hr />
+							<hr />
+							<div id="buttons">
+								<button class="btn btn-primary" id="btn0">
+									<span id="choice0"> Choice 0 </span>
+								</button>
+								<button class="btn btn-primary" id="btn1">
+									<span id="choice1"> Choice 1 </span>
+								</button>
+								<button class="btn btn-primary" id="btn2">
+									<span id="choice2"> Choice 2 </span>
+								</button>
+								<button class="btn btn-primary" id="btn3">
+									<span id="choice3"> Choice 3 </span>
+								</button>
+							</div>
+						</div>
+						<div id="progress" class="card-footer"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
