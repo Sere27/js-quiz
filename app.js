@@ -74,8 +74,32 @@ function loadQuestion() {
 		for (var i = 0; i < choices.length; i++) {
 			var element = document.getElementById("choice" + i);
 			element.innerHTML = choices[i];
+
+			guess("btn" + i, choices[i]);
 		}
+
+		showProgress();
 	}
 }
 
-function showScore() {}
+function guess(id, guess) {
+	var btn = document.getElementById(id);
+	btn.onclick = function () {
+		quiz.guess(guess);
+		loadQuestion();
+	};
+}
+
+function showScore() {
+	var html = `<h2>Score</h2><h4>${quiz.score}</h4>`;
+
+	document.querySelector(".card-body").innerHTML = html;
+}
+
+function showProgress() {
+	var totalQuestion = quiz.questions.length;
+	var questionNumber = quiz.questionIndex + 1;
+
+   document.getElementById("progress").innerHTML = 
+   `Question `+questionNumber+` of `+totalQuestion;
+}
